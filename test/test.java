@@ -54,4 +54,11 @@ class test {
             assertEquals("Bilal", d4_smash.smash(new String[] {"Bilal"}));
         }
     }
+
+    static class d5_multiplesTest {
+        @Test
+        public void test() {
+            assertEquals(23, new d5_multiples().solution(10));
+        }
+    }
 }
