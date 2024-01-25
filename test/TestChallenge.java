@@ -45,18 +45,18 @@ class TestChallenge {
     class d4_smashTest {
         @Test
         public void validate() {
-            assertEquals("Bilal Djaghout", d4_smash.smash(new String[] { "Bilal", "Djaghout" }));
+            assertEquals("Bilal Djaghout", d4_smash.smash("Bilal", "Djaghout"));
         }
 
         @Test
         public void validateEmpty() {
-            assertEquals("", d4_smash.smash(new String[] {}));
+            assertEquals("", d4_smash.smash());
         }
 
 
         @Test
         public void validateOneWord() {
-            assertEquals("Bilal", d4_smash.smash(new String[] {"Bilal"}));
+            assertEquals("Bilal", d4_smash.smash("Bilal"));
         }
     }
 
