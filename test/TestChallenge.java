@@ -1,10 +1,12 @@
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class test {
-    static class d1_growTest {
+class TestChallenge {
+    @Nested
+    class d1_growTest {
         @Test
         public void testSomething() {
             assertEquals(6, d1_grow.grow(new int[]{1, 2, 3}));
@@ -13,7 +15,8 @@ class test {
         }
     }
 
-    static class d2_reversedTest {
+    @Nested
+    class d2_reversedTest {
         @Test
         public void simpleTest() {
             assertArrayEquals(new int[]{5,4,3,2,1}, d2_reversed.reverse(5));
@@ -21,7 +24,8 @@ class test {
 
     }
 
-    static class d3_heroTest {
+    @Nested
+    class d3_heroTest {
         @Test @DisplayName("A true hero")
         void aTrueHero() {
             assertTrue(d3_hero.hero(10, 5), "With 10 bullets and 5 dragons");
@@ -37,7 +41,8 @@ class test {
         }
     }
 
-    static class d4_smashTest {
+    @Nested
+    class d4_smashTest {
         @Test
         public void validate() {
             assertEquals("Bilal Djaghout", d4_smash.smash(new String[] { "Bilal", "Djaghout" }));
@@ -55,7 +60,8 @@ class test {
         }
     }
 
-    static class d5_multiplesTest {
+    @Nested
+    class d5_multiplesTest {
         @Test
         public void test() {
             assertEquals(23, new d5_multiples().solution(10));
