@@ -103,4 +103,15 @@ class TestChallenge {
             assertArrayEquals(new int[] {100,200,300,400,500,600}, d8_count.countBy(100,6));
         }
     }
+
+    @Nested
+    class d9_countSheepTest {
+        @Test
+        public void testSomething() {
+            assertEquals("", d9_countSheep.countingSheep(0));
+            assertEquals("1 sheep...", d9_countSheep.countingSheep(1));
+            assertEquals("1 sheep...2 sheep...", d9_countSheep.countingSheep(2));
+            assertEquals("1 sheep...2 sheep...3 sheep...", d9_countSheep.countingSheep(3));
+        }
+    }
 }
