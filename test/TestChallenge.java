@@ -76,4 +76,19 @@ class TestChallenge {
             assertFalse(d6_fuel.zeroFuel(100, 50, 1));
         }
     }
+
+    @Nested
+    class d7_DNAtoRNATest {
+        @Test
+        public void testDna() {
+            d7_DNAtoRNA b = new d7_DNAtoRNA();
+            assertEquals("UUUU", b.dnaToRna("TTTT"));
+        }
+
+        @Test
+        public void testDna2() {
+            d7_DNAtoRNA b = new d7_DNAtoRNA();
+            assertEquals("GCAU", b.dnaToRna("GCAT"));
+        }
+    }
 }
