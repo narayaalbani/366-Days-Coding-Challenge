@@ -67,4 +67,13 @@ class TestChallenge {
             assertEquals(23, new d5_multiples().solution(10));
         }
     }
+
+    @Nested
+    class d6_fuelTest {
+        @Test
+        public void testSomething() {
+            assertTrue(d6_fuel.zeroFuel(50, 25, 2));
+            assertFalse(d6_fuel.zeroFuel(100, 50, 1));
+        }
+    }
 }
