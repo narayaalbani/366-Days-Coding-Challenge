@@ -117,10 +117,10 @@ class TestChallenge {
 
     @Nested
     class d10_minMaxTest {
-        private final d10_maxMin kata;
+        private final d10_minMax kata;
 
         d10_minMaxTest() {
-            kata = new d10_maxMin();
+            kata = new d10_minMax();
         }
 
         @Test
