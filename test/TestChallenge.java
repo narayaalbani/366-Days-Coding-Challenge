@@ -131,4 +131,12 @@ class TestChallenge {
             assertEquals(5, kata.max(new int[]{5}));
         }
     }
+
+    @Nested
+    class d11_sumMinMaxTest {
+        @Test
+        public void BasicTests() {
+            assertEquals(16, d11_sumMinMax.sum(new int[] { 6, 2, 1, 8, 10}));
+        }
+    }
 }
