@@ -1,3 +1,5 @@
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -137,6 +139,36 @@ class TestChallenge {
         @Test
         public void BasicTests() {
             assertEquals(16, d11_sumMinMax.sum(new int[] { 6, 2, 1, 8, 10}));
+        }
+    }
+
+    @Nested
+    class d12_factorialTest {
+        private d12_factorial fact;
+
+        @BeforeEach
+        public void initFactorial() {
+            fact = new d12_factorial();
+        }
+
+        @AfterEach
+        public void afterFactorial() {
+            fact = null;
+        }
+
+        @Test
+        public void test_factorial0() {
+            assertEquals(1, fact.factorial(0));
+        }
+
+        @Test
+        public void test_factorial3() {
+            assertEquals(6, fact.factorial(3));
+        }
+
+        @Test
+        public void test_factorial5() {
+            assertEquals(120, fact.factorial(5));
         }
     }
 }
