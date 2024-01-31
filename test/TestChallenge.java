@@ -171,4 +171,16 @@ class TestChallenge {
             assertEquals(120, fact.factorial(5));
         }
     }
+
+    @Nested
+    class d13_bitCountingTest {
+        @Test
+        public void testGame() {
+            assertEquals(5, d13_bitCounting.countBits(1234));
+            assertEquals(1, d13_bitCounting.countBits(4));
+            assertEquals(3, d13_bitCounting.countBits(7));
+            assertEquals(2, d13_bitCounting.countBits(9));
+            assertEquals(2, d13_bitCounting.countBits(10));
+        }
+    }
 }
