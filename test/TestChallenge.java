@@ -183,4 +183,14 @@ class TestChallenge {
             assertEquals(2, d13_bitCounting.countBits(10));
         }
     }
+
+    @Nested
+    class d14_convertIntToStrTest {
+        @Test
+        public void tests() {
+            assertEquals("67", d14_convertIntToStr.numberToString(67));
+            assertEquals("123", d14_convertIntToStr.numberToString(123));
+            assertEquals("999", d14_convertIntToStr.numberToString(999));
+        }
+    }
 }
