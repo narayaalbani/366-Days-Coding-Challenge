@@ -193,4 +193,14 @@ class TestChallenge {
             assertEquals("999", d14_convertIntToStr.numberToString(999));
         }
     }
+
+    @Nested
+    class d15_stringToArrayTest {
+        @Test
+        public void basicTests() {
+            assertArrayEquals(new String[]{"Robin", "Singh"}, d15_stringToArray.stringToArray("Robin Singh"));
+            assertArrayEquals(new String[]{"I", "love", "arrays", "they", "are", "my", "favorite"}, d15_stringToArray.stringToArray(
+                    "I love arrays they are my favorite"));
+        }
+    }
 }
