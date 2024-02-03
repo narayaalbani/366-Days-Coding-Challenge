@@ -199,8 +199,16 @@ class TestChallenge {
         @Test
         public void basicTests() {
             assertArrayEquals(new String[]{"Robin", "Singh"}, d15_stringToArray.stringToArray("Robin Singh"));
-            assertArrayEquals(new String[]{"I", "love", "arrays", "they", "are", "my", "favorite"}, d15_stringToArray.stringToArray(
-                    "I love arrays they are my favorite"));
+            assertArrayEquals(new String[]{"I", "love", "arrays", "they", "are", "my", "favorite"}, d15_stringToArray.stringToArray("I love arrays they are my favorite"));
+        }
+    }
+
+    @Nested
+    class d16_yesOrNoTest {
+        @Test
+        public void testBoolToWord() {
+            assertEquals(d16_yesOrNo.boolToWord(true),"Yes");
+            assertEquals(d16_yesOrNo.boolToWord(false),"No");
         }
     }
 }
