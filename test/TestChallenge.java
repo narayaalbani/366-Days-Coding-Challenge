@@ -211,4 +211,29 @@ class TestChallenge {
             assertEquals(d16_yesOrNo.boolToWord(false),"No");
         }
     }
+
+    @Nested
+    class d17_suitTest {
+        @Test
+        public void test1() {
+            System.out.println("Fixed Tests Player 1 won!");
+            assertEquals("Player 1 won!", d17_suit.rps("rock", "scissors"));
+            assertEquals("Player 1 won!", d17_suit.rps("scissors", "paper"));
+            assertEquals("Player 1 won!", d17_suit.rps("paper", "rock"));
+        }
+        @Test
+        public void test2() {
+            System.out.println("Fixed Tests Player 2 won!");
+            assertEquals("Player 2 won!", d17_suit.rps("scissors", "rock"));
+            assertEquals("Player 2 won!", d17_suit.rps("paper", "scissors"));
+            assertEquals("Player 2 won!", d17_suit.rps("rock", "paper"));
+        }
+        @Test
+        public void test3() {
+            System.out.println("Fixed Tests Draw!");
+            assertEquals("Draw!", d17_suit.rps("scissors", "scissors"));
+            assertEquals("Draw!", d17_suit.rps("paper", "paper"));
+            assertEquals("Draw!", d17_suit.rps("rock", "rock"));
+        }
+    }
 }
